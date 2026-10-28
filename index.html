@@ -2,78 +2,40 @@
 <html>
   <head>
     <title>Legacy Launcher</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <style>
       @font-face {
         font-family: Mojangles;
-        src: url('assets/Mojangles.ttf');
+        src: url("https://github.com/minecraftmodder-73695/Legacy-Minecraft-Launcher/raw/refs/heads/main/assets/Mojangles.ttf");
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
       }
-      .mainmenu {
-        font-family: Mojangles;
+      .menu {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 58px;
         gap: 10px;
       }
       .menubutton {
-        image-rendering: pixelated;
-        background: none;
+        background-image: url("assets/MainMenuButton_Norm.png");
         border: none;
-        cursor: pointer;
-        position: relative;
-        padding: 0;
-      }
-      .menubutton .norm-img {
-        display: block;
-      }
-      .menubutton .hover-img {
-        display: none;
-      }
-      .menubutton:hover .norm-img {
-        display: none;
-      }
-      .menubutton:hover .hover-img {
-        display: block;
-      }
-      button.menubutton:nth-of-type(1) {
-        margin-top: 77px;
-      }
-      .button-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #ffffff;
-        font-family: Mojangles;
+        image-rendering: pixelated;
+        width: 450px;
+        height: 40px;
+        color: white;
+        text-shadow: 2px 2px black;
+        font-family: "Mojangles";
         font-size: 16px;
-        text-shadow: 1px 1px #000000;
-        pointer-events: none;
       }
-      .menubutton:hover .button-text {
-        color: #ffff00;
+      .menubutton:hover {
+        background-image: url("assets/MainMenuButton_Over.png");
+        color: yellow;
       }
     </style>
   </head>
   <body>
-    <div class="mainmenu">
-      <img src="assets/Logo.png">
-      <button type="button" class="menubutton">
-        <img src="assets/MainMenuButton_Norm.png" class="norm-img">
-        <img src="assets/MainMenuButton_Over.png" class="hover-img">
-        <span class="button-text">Play Game</span>
-      </button>
-      <button type="button" class="menubutton">
-        <img src="assets/MainMenuButton_Norm.png" class="norm-img">
-        <img src="assets/MainMenuButton_Over.png" class="hover-img">
-        <span class="button-text">Help & Options</span>
-      </button>
-      <button type="button" class="menubutton">
-        <img src="assets/MainMenuButton_Norm.png" class="norm-img">
-        <img src="assets/MainMenuButton_Over.png" class="hover-img">
-        <span class="button-text">Exit Launcher</span>
-      </button>
+    <div class="menu">
+      <button class="menubutton">Install Game</button>
+      <button class="menubutton">Help & Options</button>
+      <button class="menubutton">Exit Launcher</button>
     </div>
   </body>
 </html>
