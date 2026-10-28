@@ -27,8 +27,14 @@
         padding: 0;
         cursor: pointer;
       }
-      .menubutton:hover {
-        <img src="assets/MainMenuButton_Over.png">
+      .menubutton .hover-img {
+        display: none;
+      }
+      .menubutton:hover .norm-img {
+        display: none;
+      }
+      .menubutton:hover .hover-img {
+        display: block;
       }
       button.menubutton:nth-of-type(1) {
         margin-top: 87px;
@@ -39,13 +45,16 @@
     <div class="mainmenu">
       <img src="assets/Logo.png" alt="Logo">
       <button type="button" class="menubutton">
-        <img src="assets/MainMenuButton_Norm.png">
+        <img src="assets/MainMenuButton_Norm.png" class="norm-img">
+        <img src="assets/MainMenuButton_Over.png" class="hover-img">
       </button>
       <button type="button" class="menubutton">
-        <img src="assets/MainMenuButton_Norm.png">
+        <img src="assets/MainMenuButton_Norm.png" class="norm-img">
+        <img src="assets/MainMenuButton_Over.png" class="hover-img">
       </button>
       <button type="button" class="menubutton">
-        <img src="assets/MainMenuButton_Norm.png">
+        <img src="assets/MainMenuButton_Norm.png" class="norm-img">
+        <img src="assets/MainMenuButton_Over.png" class="hover-img">
       </button>
     </div>
   </body>
