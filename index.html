@@ -14,7 +14,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
         margin-top: 58px;
       }
       .menubutton {
@@ -22,6 +21,8 @@
         background: none;
         border: none;
         cursor: pointer;
+        gap: 10px;
+        position: relative;
       }
       .menubutton .hover-img {
         display: none;
@@ -39,18 +40,21 @@
   </head>
   <body>
     <div class="mainmenu">
-      <img src="assets/Logo.png" alt="Logo">
+      <img src="assets/Logo.png">
       <button type="button" class="menubutton">
         <img src="assets/MainMenuButton_Norm.png" class="norm-img">
         <img src="assets/MainMenuButton_Over.png" class="hover-img">
+        <span class="button-text">Play Game</span>
       </button>
       <button type="button" class="menubutton">
         <img src="assets/MainMenuButton_Norm.png" class="norm-img">
         <img src="assets/MainMenuButton_Over.png" class="hover-img">
+        <span class="button-text">Help & Options</span>
       </button>
       <button type="button" class="menubutton">
         <img src="assets/MainMenuButton_Norm.png" class="norm-img">
         <img src="assets/MainMenuButton_Over.png" class="hover-img">
+        <span class="button-text">Exit Launcher</span>
       </button>
     </div>
   </body>
