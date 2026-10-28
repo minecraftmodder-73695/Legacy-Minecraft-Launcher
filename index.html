@@ -10,20 +10,25 @@
       }
       div {
         font-family: Mojangles;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        width:450px;
-        height:40px;
+      }
+      .menubutton {
+        image-rendering: pixelated; /* Keeps the Minecraft texture crisp */
+        display: block;
       }
     </style>
   </head>
   <body>
     <div>
       <img src="assets/Logo.png" alt="Logo">
-      <img src="assets/MainMenuButton_Norm.png" alt="Button">
-      <img src="assets/MainMenuButton_Norm.png" alt="Button">
-      <img src="assets/MainMenuButton_Norm.png" alt="Button">
+      <button type="button" class="menubutton">
+        <img src="assets/MainMenuButton_Norm.png">
+      </button>
+      <button type="button" class="menubutton">
+        <img src="assets/MainMenuButton_Norm.png">
+      </button>
+      <button type="button" class="menubutton">
+        <img src="assets/MainMenuButton_Norm.png">
+      </button>
     </div>
   </body>
 </html>
