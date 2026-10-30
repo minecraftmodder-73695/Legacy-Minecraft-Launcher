@@ -2,11 +2,21 @@
 <html>
   <head>
     <title>Legacy Launcher</title>
+    <link rel="preload" href="assets/MainMenuButton_Over.png" as="image">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <style>
       @font-face {
         font-family: Mojangles;
         src: url("assets/Mojangles.ttf");
+      }
+      body {
+        margin: 0;
+      }
+      .logo {
+        display: block;
+        margin: 0 auto;
+        margin-top: 58px;
       }
       .menu {
         display: flex;
@@ -28,14 +38,49 @@
       .menubutton:hover {
         background-image: url("assets/MainMenuButton_Over.png");
         color: yellow;
+        cursor: pointer;
+      }
+      :nth-child(1 of .menubutton) {
+        margin-top: 87px;
+      }
+      #panorama {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: url("assets/tu20.png");
+        background-size: auto 100%;
+        animation: animatedBackground 60s linear infinite;
+      }
+      @keyframes animatedBackground {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: -8200px 0;
+        }
       }
     </style>
+    <audio>
+      <source src="assets/focus.ogg"></source>
+    </audio>
   </head>
   <body>
+    <div id="panorama"></div>
+    <img class="logo" src="assets/Logo.png">
     <div class="menu">
-      <button class="menubutton">Install Game</button>
+      <button class="menubutton" onclick="window.open('https://gitea.str1k3r.xyz/cafeberry/cafeberry/releases/download/latest/LCEWindows64.zip')">Install Game</button>
       <button class="menubutton">Help & Options</button>
       <button class="menubutton">Exit Launcher</button>
     </div>
   </body>
+  <script>
+    var audio = $("audio")[0];
+    $(".menubutton").mouseenter(function() {
+      audio.currentTime = 0;
+      audio.play();
+    });
+  </script>
 </html>
